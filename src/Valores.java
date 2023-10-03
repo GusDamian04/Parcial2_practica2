@@ -29,6 +29,8 @@ public class Valores{
         int t;
         int numayor = 0; 
         int numenor = 0;
+        int numimpar = 0;
+        int numpar = 0;
         
         //Leer el tamaño del arreglo
         System.out.println("__________________________________________________");
@@ -53,12 +55,24 @@ public class Valores{
         System.out.println("-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o");
         
         //Identificar en numero mayor y menor con el arreglo
-        for (int i = 1; i < numero.length; i++){
+        for (int i = 0; i < numero.length; i++){
             if (numero[i] > numayor)
                 numayor = numero[i];
             else
                 numenor = numero[i];
         }
+
+        // Identificar cuantos numeros pares e impares :)
+        for (int i = 0; i < numero.length; i++){
+            if (numero[i] % 2 == 0){
+                numpar++;
+            } else {
+                numimpar++;
+            }
+        }
+
+        System.out.println("Numeros impares: "+numimpar);
+        System.out.println("Numeros pares: "+numpar);
 
         // Imprimir los valores del numero mayor y menor
         System.out.println(" ");
